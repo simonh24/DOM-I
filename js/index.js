@@ -49,7 +49,8 @@ navArr.forEach((item, ind) => item.textContent = navValues[ind]);
 document.querySelector("header img").setAttribute("src", siteContent.nav["img-src"]);
 
 // cta
-document.querySelector(".cta h1").textContent = "DOM Is Awesome";
+document.querySelector(".cta h1").style.whiteSpace = "pre";
+document.querySelector(".cta h1").textContent = "DOM\r\nIs\r\nAwesome";
 document.querySelector(".cta button").textContent = "Get Started";
 document.querySelector(".cta img").setAttribute("src", "img/header-img.png");
 
@@ -78,7 +79,8 @@ bottomContentArr[2].querySelector("p").textContent = "Vision content elementum m
 let contact = document.querySelector(".contact");
 contact.querySelector("h4").textContent = "Contact";
 let parContactArr = Array.from(contact.querySelectorAll("p"));
-parContactArr[0].textContent = "123 Way 456 Street Somewhere, USA";
+parContactArr[0].style.whiteSpace = "pre";
+parContactArr[0].textContent = `123 Way 456 Street\r\nSomewhere, USA`;
 parContactArr[1].textContent = "1 (888) 888-8888";
 parContactArr[2].textContent = "sales@greatidea.io";
 
