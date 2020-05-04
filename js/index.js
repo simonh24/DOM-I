@@ -95,3 +95,16 @@ taskThreeTwo.setAttribute("href", "#");
 taskThreeTwo.textContent = "Last";
 document.querySelector("nav").append(taskThreeTwo);
 document.querySelector("nav").prepend(taskThreeOne);
+
+// stretch
+let stretchButton = document.createElement("button");
+stretchButton.textContent = "Change";
+stretchButton.onclick = function() {
+  newNavArr = Array.from(document.querySelector("nav").children);
+  if (newNavArr[1].style.color === "red") {
+    newNavArr.forEach(item => item.style.color = "blue");
+  } else {
+    newNavArr.forEach(item => item.style.color = "red");
+  }
+}
+document.querySelector("nav").append(stretchButton);
