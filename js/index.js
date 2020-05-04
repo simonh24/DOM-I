@@ -49,43 +49,44 @@ navArr.forEach((item, ind) => item.textContent = navValues[ind]);
 document.querySelector("header img").setAttribute("src", siteContent.nav["img-src"]);
 
 // cta
-document.querySelector(".cta h1").style.whiteSpace = "pre";
-document.querySelector(".cta h1").textContent = "DOM\r\nIs\r\nAwesome";
-document.querySelector(".cta button").textContent = "Get Started";
-document.querySelector(".cta img").setAttribute("src", "img/header-img.png");
+let cta = siteContent.cta;
+document.querySelector(".cta h1").textContent = cta.h1;
+document.querySelector(".cta button").textContent = cta.button;
+document.querySelector(".cta img").setAttribute("src", cta["img-src"]);
 
 // main content - top content
+let mainContent = siteContent["main-content"];
 let topContent = document.querySelector(".top-content").children;
 let topContentArr = Array.from(topContent);
-topContentArr[0].querySelector("h4").textContent = "Features";
-topContentArr[0].querySelector("p").textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
-topContentArr[1].querySelector("h4").textContent = "About";
-topContentArr[1].querySelector("p").textContent = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+topContentArr[0].querySelector("h4").textContent = mainContent["features-h4"];
+topContentArr[0].querySelector("p").textContent = mainContent["features-content"];
+topContentArr[1].querySelector("h4").textContent = mainContent["about-h4"];
+topContentArr[1].querySelector("p").textContent = mainContent["about-content"];
 
 // main content - img
-document.querySelector(".middle-img").setAttribute("src", "img/mid-page-accent.jpg");
+document.querySelector(".middle-img").setAttribute("src", mainContent["middle-img-src"]);
 
 // main content - bottom content
 let bottomContent = document.querySelector(".bottom-content").children;
 let bottomContentArr = Array.from(bottomContent);
-bottomContentArr[0].querySelector("h4").textContent = "Services";
-bottomContentArr[0].querySelector("p").textContent = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
-bottomContentArr[1].querySelector("h4").textContent = "Product";
-bottomContentArr[1].querySelector("p").textContent = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
-bottomContentArr[2].querySelector("h4").textContent = "Vision";
-bottomContentArr[2].querySelector("p").textContent = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+bottomContentArr[0].querySelector("h4").textContent = mainContent["services-h4"];
+bottomContentArr[0].querySelector("p").textContent = mainContent["services-content"];
+bottomContentArr[1].querySelector("h4").textContent = mainContent["product-h4"];
+bottomContentArr[1].querySelector("p").textContent = mainContent["product-content"];
+bottomContentArr[2].querySelector("h4").textContent = mainContent["vision-h4"];
+bottomContentArr[2].querySelector("p").textContent = mainContent["vision-content"];
 
 // contact
+let cont = siteContent.contact;
 let contact = document.querySelector(".contact");
-contact.querySelector("h4").textContent = "Contact";
+contact.querySelector("h4").textContent = cont["contact-h4"];
 let parContactArr = Array.from(contact.querySelectorAll("p"));
-parContactArr[0].style.whiteSpace = "pre";
-parContactArr[0].textContent = `123 Way 456 Street\r\nSomewhere, USA`;
-parContactArr[1].textContent = "1 (888) 888-8888";
-parContactArr[2].textContent = "sales@greatidea.io";
+parContactArr[0].textContent = cont["address"];
+parContactArr[1].textContent = cont["phone"];
+parContactArr[2].textContent = cont["email"];
 
 //footer
-document.querySelector("footer p").textContent = "Copyright Great Idea! 2018";
+document.querySelector("footer p").textContent = siteContent.footer.copyright;
 
 // task 3
 navArr.forEach(item => item.style.color = "green");
