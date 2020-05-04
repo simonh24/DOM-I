@@ -41,6 +41,8 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+let linebreak = document.createElement("br");
+
 // header
 let nav = document.querySelector("nav").children;
 let navArr = Array.from(nav);
@@ -73,3 +75,11 @@ bottomContentArr[1].querySelector("h4").textContent = "Product";
 bottomContentArr[1].querySelector("p").textContent = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 bottomContentArr[2].querySelector("h4").textContent = "Vision";
 bottomContentArr[2].querySelector("p").textContent = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+// contact
+let contact = document.querySelector(".contact");
+contact.querySelector("h4").textContent = "Contact";
+let parContactArr = Array.from(contact.querySelectorAll("p"));
+parContactArr[0].textContent = "123 Way 456 Street Somewhere, USA";
+parContactArr[1].textContent = "1 (888) 888-8888";
+parContactArr[2].textContent = "sales@greatidea.io";
