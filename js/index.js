@@ -41,8 +41,6 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let linebreak = document.createElement("br");
-
 // header
 let nav = document.querySelector("nav").children;
 let navArr = Array.from(nav);
@@ -86,3 +84,14 @@ parContactArr[2].textContent = "sales@greatidea.io";
 
 //footer
 document.querySelector("footer p").textContent = "Copyright Great Idea! 2018";
+
+// task 3
+navArr.forEach(item => item.style.color = "green");
+let taskThreeOne = document.createElement("a");
+taskThreeOne.setAttribute("href", "#");
+taskThreeOne.textContent = "First";
+let taskThreeTwo = document.createElement("a");
+taskThreeTwo.setAttribute("href", "#");
+taskThreeTwo.textContent = "Last";
+document.querySelector("nav").append(taskThreeTwo);
+document.querySelector("nav").prepend(taskThreeOne);
