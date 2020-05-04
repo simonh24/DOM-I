@@ -46,3 +46,6 @@ let navArr = Array.from(nav);
 let navValues = Object.values(siteContent.nav);
 navArr.forEach((item, ind) => item.textContent = navValues[ind]);
 document.querySelector("header img").setAttribute("src", siteContent.nav["img-src"]);
+document.querySelector(".cta h1").textContent = "DOM Is Awesome";
+document.querySelector(".cta button").textContent = "Get Started";
+document.querySelector(".cta img").setAttribute("src", "img/header-img.png");
