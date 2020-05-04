@@ -83,3 +83,6 @@ let parContactArr = Array.from(contact.querySelectorAll("p"));
 parContactArr[0].textContent = "123 Way 456 Street Somewhere, USA";
 parContactArr[1].textContent = "1 (888) 888-8888";
 parContactArr[2].textContent = "sales@greatidea.io";
+
+//footer
+document.querySelector("footer p").textContent = "Copyright Great Idea! 2018";
