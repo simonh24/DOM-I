@@ -62,3 +62,14 @@ topContentArr[1].querySelector("h4").textContent = "About";
 topContentArr[1].querySelector("p").textContent = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 
 // main content - img
+document.querySelector(".middle-img").setAttribute("src", "img/mid-page-accent.jpg");
+
+// main content - bottom content
+let bottomContent = document.querySelector(".bottom-content").children;
+let bottomContentArr = Array.from(bottomContent);
+bottomContentArr[0].querySelector("h4").textContent = "Services";
+bottomContentArr[0].querySelector("p").textContent = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+bottomContentArr[1].querySelector("h4").textContent = "Product";
+bottomContentArr[1].querySelector("p").textContent = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+bottomContentArr[2].querySelector("h4").textContent = "Vision";
+bottomContentArr[2].querySelector("p").textContent = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
